@@ -1,0 +1,85 @@
+<template name="fishing">
+
+
+    <div class="row">
+        <div class="page-header">
+            <h1> Project <small>List</small></h1>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <button class="btn btn-lg btn-primary " data-toggle="modal" data-target="#addProjectModal">Add Project</button>
+
+        <div class="modal fade" id="addProjectModal" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3 class="modal-title">Add Project</h3>
+                    </div>
+
+                    <div class="modal-body">
+                        <label for="name">Name:</label>
+                        <input type="text" class="input input-xlarge name" name="name" value="{{project.name}}" id="name">
+
+                        <label for="client">Client:</label>
+                        <input type="text" class="input input-xlarge client" name="client" value="{{project.client}}" id="client">
+
+                        <select class="status" name="status">
+                            <option value="OnHold">On Hold</option>
+                            <option value="Active">Active</option>
+                        </select>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary save">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Client</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each projectList}}
+                    {{> projectRow}}
+                {{/each}}
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+</template>
+
+
+<template name="projectRow">
+    <tr class="prjectRow">
+        <td>{{name}}</td>
+        <td>{{client}}</td>
+        <td>{{formatDate duedate}}</td>
+        <td>{{status}}</td>
+    </tr>
+
+</template>
+
