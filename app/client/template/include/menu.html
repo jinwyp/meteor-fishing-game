@@ -1,0 +1,79 @@
+<template name="menu">
+
+    <nav class="navbar nav-default nav-fixed-top" role="navigation">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">玩聚网</a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" >
+                <ul class="nav navbar-nav">
+
+                    <li class="active"><a href="/">首页</a></li>
+                    <li><a href="/game">游戏－快乐捕鱼</a></li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的信息 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/userinfoindex">基本信息</a></li>
+                            <li><a href="#">我的学校</a></li>
+                            <li><a href="#">我的工作</a></li>
+
+                            <li class="divider"></li>
+                            <li><a href="#">帮助 － 如何完善简历</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/userinfoindex">我的短信</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的短信 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">发布短信</a></li>
+                            <li><a href="#">收件箱</a></li>
+
+
+                            <li class="divider"></li>
+                            <li><a href="#">帮助 － 如何使用收件箱</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    {{loginButtons align="right"}}
+
+                    <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                            <!--<li><a href="#">Action</a></li>-->
+                            <!--<li><a href="#">Another action</a></li>-->
+                            <!--<li><a href="#">Something else here</a></li>-->
+                            <!--<li class="divider"></li>-->
+                            <!--<li><a href="#">Separated link</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+
+
+
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+</template>

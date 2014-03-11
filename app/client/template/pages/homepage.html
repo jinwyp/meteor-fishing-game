@@ -1,0 +1,25 @@
+<template name="homepage">
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="page-header">
+                <h1> Homepage <small>List</small></h1>
+                <button class="btn btn-primary" id="add">Add Clicks</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                {{#each showClicks}}
+                    <p>Clicks : {{num}}</p>
+                {{/each}}
+            </div>
+        </div>
+
+
+
+    </div>
+
+</template>
