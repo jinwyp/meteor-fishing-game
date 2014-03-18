@@ -10,6 +10,12 @@
     {{> menu}}
 
 
+    {{#if currentUser}}
+
+        {{> usermessages}}
+
+    {{/ if}}
+
     {{renderPage}}
 
 </div>

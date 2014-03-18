@@ -1,0 +1,104 @@
+<template name="usermessages">
+
+
+    <div class="row" >
+
+        <!--
+        <div class="row">
+            <div class="page-header">
+                <h1> 好友列表</h1>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-lg-12">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="newmessage">请输入新的消息</label>
+                        <input type="text" class="form-control" ng-model="data.newMessage.body" id="newmessage" placeholder="请输入新的消息">
+                    </div>
+
+                    <button type="submit" class="btn btn-default" ng-click="addNewMessage()">发送</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-lg-12">
+                <ul>
+                    <li> 共有 [[Usermessages.length]] 条消息</li>
+                    <li ng-repeat="message in Usermessages">[[message.body]]</li>
+                </ul>
+            </div>
+        </div>
+-->
+
+
+
+
+        <div class="panel panel-default friends-panel {{ngShow classUserMessageListBox}}">
+            <div class="panel-heading">
+                <h3 class="panel-title"> 好友列表</h3>
+            </div>
+
+            <div class="panel-body">
+                <ul>
+                    {{#each allusers}}
+                        <li class="show_message-list clearfix">
+                            <div class="photo-head"><img src="1.jpg" style="width:64px; height: 64px;"> </div>
+                            <div class="message-box">
+                                <span>{{ username }}</span>
+                            </div>
+
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+
+        </div>
+
+
+
+        <div class="panel panel-default friends-panel {{ngHide classUserMessageListBox}}" >
+            <div class="panel-heading clearfix">
+                <button class="back_message_list btn btn-default btn-xs">返回</button>
+                <h3 class="panel-title"> 您正在与 {{ currentUserMessage.user.username}}的对话</h3>
+            </div>
+
+
+            <div class="panel-body">
+                <ul class="clearfix">
+                    {{#each currentUserMessage.messages}}
+
+
+                        <li class="show_single_usermessage  clearfix {{ ngClassCurrentUser fromUserId 'message_me' 'message_other'}}">
+                            <div class="photo-head"><img src="1.jpg" style="width:64px; height: 64px;"> </div>
+                            <div class="message-box">
+                                <span class="message-time">{{ formatDateTime sendDate}}</span>
+                                <p>{{ content }}</p>
+                            </div>
+                        </li>
+
+                    {{/each}}
+
+
+
+                </ul>
+            </div>
+
+            <div class="panel-footer">
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control usermessage_content" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-default btn-primary send_usermessage">发送信息</button>
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</template>

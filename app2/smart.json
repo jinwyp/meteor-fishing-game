@@ -1,7 +1,6 @@
 {
   "packages": {
-    "router": {},
-    "moment": {},
+    "ngMeteor": {},
     "bootstrap-3": {}
   }
 }

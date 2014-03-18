@@ -5,17 +5,6 @@
 
 if (Meteor.isServer) {
 
-    Meteor.publish('clicks', function(){
-        return Clicks.find();
-    });
-
-    Meteor.publish('projects', function(){
-        return Projects.find();
-    });
-
-    Meteor.publish('usermessages', function(){
-        return Usermessages.find();
-    });
 
 
     Usermessages.allow({
@@ -40,8 +29,6 @@ if (Meteor.isServer) {
 
     Meteor.startup(function () {
 
-
-
         // code to run on server at startup
     });
 
@@ -53,7 +40,12 @@ if (Meteor.isServer) {
 
         'addClick' : function(){
             Clicks.insert({"num" : Math.floor(Math.random()*1000)});
+        },
+
+        'addUserMessage' : function(){
+
         }
+
     });
 
 

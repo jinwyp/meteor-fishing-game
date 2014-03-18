@@ -4,7 +4,6 @@
     "basePackages": {
       "router": {},
       "moment": {},
-      "ngMeteor": {},
       "bootstrap-3": {}
     },
     "packages": {
@@ -17,11 +16,6 @@
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.5.1",
         "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
-      },
-      "ngMeteor": {
-        "git": "https://github.com/loneleeandroo/ngMeteor.git",
-        "tag": "v0.1.17",
-        "commit": "75bf4be197284c8ee2cf6c4a4011ade4ca063077"
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
