@@ -15,8 +15,8 @@ Meteor.publish('publicationUsermessages', function(){
     return Usermessages.find();
 });
 
-Meteor.publish('publicationUserfriends', function(){
+Meteor.publish('publicationUserfriends', function(usercursor){
 //    return Userfriends.find({userId:this.userId});
 
-    return Meteor.users.find( );
+    return Meteor.users.find({}, {limit:20, skip:usercursor});
 });

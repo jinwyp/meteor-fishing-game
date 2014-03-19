@@ -1,11 +1,15 @@
 
-if (Meteor.isClient) {
+Meteor.autorun(function(){
 
     Meteor.subscribe("publicationClicks");
     Meteor.subscribe("publicationProjects");
     Meteor.subscribe("publicationUsermessages");
-    Meteor.subscribe("publicationUserfriends");
+    Meteor.subscribe("publicationUserfriends", 0);
 
+});
+
+
+    Session.setDefault('cssUserMessageMenu', false);
     Session.setDefault('cssUserMessageListBox', true);
     Session.setDefault('dataCurrentUserIdMessage', null);
 
@@ -18,8 +22,6 @@ if (Meteor.isClient) {
         '/' : 'homepage',
         '/game' : 'fishing'
     });
-
-
 
 
 
@@ -59,23 +61,32 @@ if (Meteor.isClient) {
 
 
     Template.usermessages.classUserMessageListBox = function(){
-
         return Session.get('cssUserMessageListBox') ;
     };
+    Template.usermessages.classUserMessageMenu = function(){
+        return Session.get('cssUserMessageMenu') ;
+    };
+    Template.menu.events = ({
+        'click .click_show_user_menu' : function(event, tmpl){
+            Session.set('cssUserMessageMenu', !Session.get('cssUserMessageMenu')) ;
+            console.log(this);
+        }
+    });
 
     Template.usermessages.events = ({
-        'click .show_message-list' : function(event, tmpl){
+        'click .click_hide_message_menu' : function(event, tmpl){
+            Session.set('cssUserMessageMenu', !Session.get('cssUserMessageMenu')) ;
+        },
+        'click .click_show_message_list' : function(event, tmpl){
             Session.set('cssUserMessageListBox', false) ;
             Session.set('dataCurrentUserIdMessage', this._id) ;
             console.log(this);
-
         },
-        'click .back_message_list' : function(event, tmpl){
+        'click .click_back_message_list' : function(event, tmpl){
             Session.set('cssUserMessageListBox', true) ;
             Session.set('dataCurrentUserIdMessage', null) ;
-
         },
-        'click .send_usermessage' : function(event, tmpl){
+        'click .click_send_usermessage' : function(event, tmpl){
             var newmessage = {
                 fromUserId : Meteor.userId(),
                 toUserId : Session.get('dataCurrentUserIdMessage'),
@@ -212,5 +223,5 @@ if (Meteor.isClient) {
 
 
 
-}
+
 
