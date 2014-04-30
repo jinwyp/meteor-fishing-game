@@ -19,6 +19,103 @@ ul li { margin-bottom: 10px;}
 
 
 
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+/*
+ * Admin Panel
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+.adminhtmlbody {
+    padding-top: 50px;
+}
+
+
+
+
+/*
+ * Admin Sidebar
+ */
+
+/* Hide for mobile, show later */
+.adminsidebar {
+    display: none;
+}
+@media (min-width: 768px) {
+    .adminsidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+/* Sidebar navigation */
+.adminnav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+.adminnav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.adminnav-sidebar > .active > a {
+    color: #fff;
+    background-color: #428bca;
+}
+
+
+/*
+ * Admin Main content
+ */
+
+.adminmain {
+    padding: 20px;
+}
+@media (min-width: 768px) {
+    .adminmain {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+.adminmain .page-header {
+    margin-top: 0;
+}
+
+
+
+
+
+/*
+ * Admin Panel End
+ */
+
+
+
+/*
+ *  Login 登录注册 右上角菜单
+ */
+
+.open .dropdown-menu { z-index: 500;}
+
+
 
 /*  User Message 用户短信 */
 

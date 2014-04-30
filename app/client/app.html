@@ -1,23 +1,14 @@
 
 
 <head>
-  <title>app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>玩聚网</title>
 </head>
 
 <body>
-<div class="container-fluid">
 
-    {{> menu}}
+    {{renderRouter}}
 
-
-    {{#if currentUser}}
-
-        {{> usermessages}}
-
-    {{/ if}}
-
-    {{renderPage}}
-
-</div>
 </body>
 

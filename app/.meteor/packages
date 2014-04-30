@@ -4,11 +4,9 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-preserve-inputs
 jquery
-router
 moment
 bootstrap-3
 accounts-base
 accounts-password
-accounts-ui
+accounts-ui-bootstrap-3
