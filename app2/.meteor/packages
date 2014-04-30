@@ -4,9 +4,10 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-insecure
-ngMeteor
+moment
 bootstrap-3
+accounts-ui-bootstrap-3
+accounts-admin-ui-bootstrap-3
+iron-router
 accounts-base
 accounts-password
-accounts-ui

@@ -1,6 +1,9 @@
 {
   "packages": {
-    "ngMeteor": {},
-    "bootstrap-3": {}
+    "moment": {},
+    "bootstrap-3": {},
+    "accounts-ui-bootstrap-3": {},
+    "accounts-admin-ui-bootstrap-3": {},
+    "iron-router": {}
   }
 }
